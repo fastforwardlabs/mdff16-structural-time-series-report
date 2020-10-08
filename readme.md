@@ -1,4 +1,4 @@
-# FF09: Federated Learning - Public Version
+# FF16: Structural Time Series
 
 ## Dev
 
