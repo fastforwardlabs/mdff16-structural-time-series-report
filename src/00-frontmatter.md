@@ -4,10 +4,10 @@ FF16 &middot; _October 2020_
 
 ![Structural Time-Series report cover](/figures/ff16-cover-splash.png)
 
-This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>.
+_This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>.
 We write reports about emerging technologies.
 Accompanying each report are working prototypes or code that exhibits the capabilities of the algorithm and offer detailed technical advice on its practical application.
-Read our full report on structural time series below or <a href="/" target="_blank" id="report-pdf-download">download the PDF</a>.
+Read our full report on structural time series below or <a href="/" target="_blank" id="report-pdf-download">download the PDF</a>._
 
 [[TOC]]
 
