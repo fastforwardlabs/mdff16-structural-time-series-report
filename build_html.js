@@ -599,7 +599,7 @@ function makeHead() {
 
 <meta property="og:title" content="${title}" /> 
 <meta property="og:description" content="${description}" />
-<meta property="og:image" content="https://structural-time-series.fastforwardlabs.com/figures/ff16-cover.png" />
+<meta property="og:image" content="https://structural-time-series.fastforwardlabs.com/figures/ff16-cover-splash.png" />
 <meta property="og:url" content="https://structural-time-series.fastforwardlabs.com" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -616,7 +616,7 @@ ${makeJS()}
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-157475426-8', 'auto');
+  ga('create', 'UA-157475426-9', 'auto');
   ga('send', 'pageview');
 
   window.addEventListener('load', function() {
