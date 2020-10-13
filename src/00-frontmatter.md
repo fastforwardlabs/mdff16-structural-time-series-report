@@ -16,8 +16,6 @@ Read our full report on structural time series below or <a href="/" target="_bla
 Time series data is ubiquitous, and many methods of processing and modeling data over time have been developed.
 As with any data science project, there is no one method to rule them all, and the most appropriate approach ought to depend on the data in question, the goals of the modeler, and the time and resources available.
 
-[[ figure: general time series graph ]]
-
 We have often encountered time series problems in our client-facing work at Cloudera Fast Forward.
 These come in a variety of shapes and sizes.
 Sometimes there are millions of parallel time series, where external factors are expected to be extremely predictive, and there is a single well-defined metric to optimize.
