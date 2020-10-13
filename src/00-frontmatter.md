@@ -11,6 +11,8 @@ Read our full report on structural time series below or <a href="/" target="_bla
 
 [[TOC]]
 
+## Introduction
+
 Time series data is ubiquitous, and many methods of processing and modeling data over time have been developed.
 As with any data science project, there is no one method to rule them all, and the most appropriate approach ought to depend on the data in question, the goals of the modeler, and the time and resources available.
 
