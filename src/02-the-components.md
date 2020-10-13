@@ -10,8 +10,7 @@ are some functions that are common to many time series, which we will
 outline here. Schematically, the model we are describing looks something
 like this:
 
-![](Pictures/10000201000002B30000003E2B6BA8EF3522AFF9.png){width="6.5in"
-height="0.5835in"}
+![](figures/structural-eqn.png)
 
 Let's take a brief look at each of the components that contribute to the
 observed time series values.

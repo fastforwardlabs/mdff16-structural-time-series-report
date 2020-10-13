@@ -661,8 +661,7 @@ observed variable is deconstructed into smooth functions of time. There
 are some functions that are common to many time series, which we will
 outline here. Schematically, the model we are describing looks something
 like this:</p>
-<p><img src="Pictures/10000201000002B30000003E2B6BA8EF3522AFF9.png" alt="">{width=“6.5in”
-height=“0.5835in”}</p>
+<figure><img src="figures/structural-eqn.png" alt=""></figure>
 <p>Let’s take a brief look at each of the components that contribute to the
 observed time series values.</p>
 <h3 id="trend">Trend</h3>
@@ -886,8 +885,7 @@ easy interpretation, with a MAPE of 0.05 corresponding to being about 5%
 wrong, on average. The MAPE is defined exactly as we’d expect: it’s the
 mean of the absolute value of the error as a fraction of the true value.</p>
 <p>[[ FIGURE: definition of MAPE. ]]</p>
-<p><img src="Pictures/10000201000001AF000000651EFA049EA2E09763.png" alt="">{width=“4.4898in”
-height=“1.052in”}</p>
+<figure><img src="figures/mape-defn.png" alt=""></figure>
 <p>MAPE, while interpretable, has some problems. It does not treat
 overprediction and underprediction symmetrically. The same error (as in,
 the same absolute difference between the forecast and true values) is
@@ -919,8 +917,7 @@ appropriate for intermittent demand (see <a href="https://robjhyndman.com/papers
 For more in-depth discussion of the considerations in choosing a
 forecast-accuracy metric, we recommend the linked papers.</p>
 <p>[[ FIGURE: definition of MASE
-]]<img src="Pictures/10000201000001B00000006CC683ED52A2D9B857.png" alt="">{width=“4.5in”
-height=“1.1252in”}</p>
+]]<img src="figures/mase-defn.png" alt=""></p>
 <p>The baseline used when computing MASE is the naive one-step ahead
 forecast, but it can easily be extended to a seasonal variant.</p>
 <h2 id="modeling-electricity-demand-in-california">Modeling electricity demand in California</h2>
@@ -1008,8 +1005,7 @@ baseline against which we scale other errors. The MASE of the baseline
 on the holdout set is 1.07, indicating that the baseline performs worse
 for 2019 than it does on average in the previous years.</p>
 <p>[[ FIGURE: default prophet model against actuals ]]</p>
-<p><img src="Pictures/10000201000002BC000001C272D2B1603EEFA89C.png" alt="">{width=“6.5in”
-height=“4.1807in”}</p>
+<figure><img src="figures/baseline.png" alt=""></figure>
 <h4 id="applying-prophet">Applying Prophet</h4>
 <p>Our next model uses Prophet to capture trend and seasonality at three
 levels: yearly, weekly, and daily. This is the default Prophet model,
@@ -1031,8 +1027,7 @@ increasing complexity.</p>
 <p>First, let’s <em>look at the forecast</em> against some actuals in the hold out
 test set. This can be incredibly revealing.<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup></p>
 <p>[[ FIGURE: screenshot of forecast vs test data ]]</p>
-<p><img src="Pictures/10000201000002BC000001C2E6CBD128F9DD50A3.png" alt="">{width=“6.5in”
-height=“4.1807in”}</p>
+<figure><img src="figures/prophet-simple.png" alt=""></figure>
 <p>There’s an obvious spiky dip in the observed time series (depicted in
 orange in the figure above) in late 2019. This is likely caused by a
 power outage. There are several similar spikes of lower magnitude within
@@ -1056,8 +1051,7 @@ line constructed of scattered points to be as narrow and straight as
 possible. Here, the curve towards the <em>x</em>-axis indicates that we are
 preferentially underpredicting.</p>
 <p>[[ FIGURE: screenshot of scatter plot
-]]<img src="Pictures/10000201000002BC000001C218C1B8C06673F9E4.png" alt="">{width=“6.5in”
-height=“4.1807in”}</p>
+]]<img src="figures/scatter.png" alt=""></p>
 <p>We can also look at a histogram of the residuals (the difference between
 forecast and prediction) to discover if we are favourably overplotting
 or underplotting. This should be an approximately normal distribution,
@@ -1066,8 +1060,7 @@ Any secondary peaks (or strong skew) will flag that we have missed some
 systematic effect that may be causing us to consistently overpredict or
 underpredict in some circumstances.</p>
 <p>[[ FIGURE: screenshot of histogram ]]</p>
-<p><img src="Pictures/10000201000002BC000001C27133F318258F6EF3.png" alt="">{width=“6.5in”
-height=“4.1807in”}</p>
+<figure><img src="figures/histogram.png" alt=""></figure>
 <p>Finally, we can look at autocorrelation plots. The autocorrelation of a
 time series tells us how correlated various time steps are with previous
 time steps. We should look at the autocorrelation of the residuals (we’d
@@ -1075,10 +1068,8 @@ certainly expect there to be plenty of autocorrelation in the original
 time series and forecast). If there are strong correlations in the
 residuals, then we are effectively leaving signal unused.</p>
 <p>[[ FIGURE: screenshot of autocorrelation plots ]]</p>
-<p><img src="Pictures/10000201000002BC000001C2EF1A566253964DFC.png" alt="">{width=“5.828in”
-height=“3.7583in”}</p>
-<p><img src="Pictures/10000201000002BC000001C29F5C63B2BBE4AF84.png" alt="">{width=“5.8075in”
-height=“3.7126in”}</p>
+<figure><img src="figures/autocorrelation.png" alt=""></figure>
+<figure><img src="figures/partial-autocorrelation.png" alt=""></figure>
 <p>When using an autoregressive model, highly autocorrelated residuals are
 a sign of poor model fit. The same is true in the case of GAM-like
 structural time series (without autoregressive terms), but it is more
@@ -1095,8 +1086,9 @@ autocorrelation. In our case, we clearly have strong autocorrelation
 within each day, and if we want to gain accuracy for forecasting the
 next few hours, we should certainly include autoregressive terms.</p>
 <div class="info">
-<p><strong>Aside</strong>: So why not autoregress? It could be done, even with a
-Prophet-like model. In fact, we could implement it using the external
+<h4 id="so-why-not-autoregress%3F">So why not autoregress?</h4>
+<p>It could be done, even with a Prophet-like model.
+In fact, we could implement it using the external
 regressor functionality of Prophet by feeding in lagged observations.
 However, in exchange for increased power to fit complex time series, we
 give up several things. The first is interpretability. A given
@@ -1142,8 +1134,7 @@ reliable around those boundaries. Nonetheless, extending the model in
 this way results in a better fit than both the default Prophet model and
 the baseline, with a MAPE of 7.33% and a MASE of 0.94.</p>
 <p>[[ FIGURE: improved model vs actuals ]]</p>
-<p><img src="Pictures/10000201000002BC000001C2BE635F4A74415874.png" alt="">{width=“6.5in”
-height=“4.1807in”}</p>
+<figure><img src="figures/prophet-complex.png" alt=""></figure>
 <h4 id="the-final-model">The final model</h4>
 <p>Naturally, we won’t stop exploring as soon as we beat the baseline. We
 still have the problem of a slightly unsatisfactory effect, where the
@@ -1173,8 +1164,7 @@ seasons, rather than the clear summer/winter split of the additive
 model. It also improves the MAPE and MASE over all previous models, with
 a MAPE of 6.95% and a MASE of 0.89.</p>
 <p>[[ FIGURE: final model vs actuals ]]</p>
-<p><img src="Pictures/10000201000002BC000001C239C4125469392358.png" alt="">{width=“6.5in”
-height=“4.1807in”}</p>
+<figure><img src="figures/prophet-complex-log" alt=""></figure>
 <p>Clearly the model is not perfect. However, with the diagnostic app, we
 can investigate the areas of good and poor fit.</p>
 <p>There seem to be two primary things to improve. One source of error is
@@ -1271,8 +1261,7 @@ selected range exceeding a chosen threshold?” We envision that extended
 versions of this interface could provide a useful interface for analysts
 using forecasting to aid, for example, capacity planning.</p>
 <p>[[ FIGURE: app interface. ]]</p>
-<p><img src="Pictures/100002010000028C000004FEB21525B1D34D744C.png" alt="">{width=“4.1902in”
-height=“8.2244in”}</p>
+<figure><img src="figures/app.png" alt=""></figure>
 <h4 id="backcasting">Backcasting</h4>
 <p>Since our model depends only on time, we can run forecasts arbitrarily
 far into the future (though we will increase our uncertainty in the

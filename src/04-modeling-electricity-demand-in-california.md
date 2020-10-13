@@ -104,8 +104,7 @@ for 2019 than it does on average in the previous years.
 
 \[\[ FIGURE: default prophet model against actuals \]\]
 
-![](Pictures/10000201000002BC000001C272D2B1603EEFA89C.png){width="6.5in"
-height="4.1807in"}
+![](figures/baseline.png)
 
 #### Applying Prophet
 
@@ -141,8 +140,7 @@ of a seasonal component.]
 
 \[\[ FIGURE: screenshot of forecast vs test data \]\]
 
-![](Pictures/10000201000002BC000001C2E6CBD128F9DD50A3.png){width="6.5in"
-height="4.1807in"}
+![](figures/prophet-simple.png)
 
 There's an obvious spiky dip in the observed time series (depicted in
 orange in the figure above) in late 2019. This is likely caused by a
@@ -169,8 +167,7 @@ possible. Here, the curve towards the *x*-axis indicates that we are
 preferentially underpredicting.
 
 \[\[ FIGURE: screenshot of scatter plot
-\]\]![](Pictures/10000201000002BC000001C218C1B8C06673F9E4.png){width="6.5in"
-height="4.1807in"}
+\]\]![](figures/scatter.png)
 
 We can also look at a histogram of the residuals (the difference between
 forecast and prediction) to discover if we are favourably overplotting
@@ -182,8 +179,7 @@ underpredict in some circumstances.
 
 \[\[ FIGURE: screenshot of histogram \]\]
 
-![](Pictures/10000201000002BC000001C27133F318258F6EF3.png){width="6.5in"
-height="4.1807in"}
+![](figures/histogram.png)
 
 Finally, we can look at autocorrelation plots. The autocorrelation of a
 time series tells us how correlated various time steps are with previous
@@ -194,11 +190,9 @@ residuals, then we are effectively leaving signal unused.
 
 \[\[ FIGURE: screenshot of autocorrelation plots \]\]
 
-![](Pictures/10000201000002BC000001C2EF1A566253964DFC.png){width="5.828in"
-height="3.7583in"}
+![](figures/autocorrelation.png)
 
-![](Pictures/10000201000002BC000001C29F5C63B2BBE4AF84.png){width="5.8075in"
-height="3.7126in"}
+![](figures/partial-autocorrelation.png)
 
 When using an autoregressive model, highly autocorrelated residuals are
 a sign of poor model fit. The same is true in the case of GAM-like
@@ -218,8 +212,10 @@ next few hours, we should certainly include autoregressive terms.
 
 ::: info
 
-**Aside**: So why not autoregress? It could be done, even with a
-Prophet-like model. In fact, we could implement it using the external
+#### So why not autoregress?
+
+It could be done, even with a Prophet-like model.
+In fact, we could implement it using the external
 regressor functionality of Prophet by feeding in lagged observations.
 However, in exchange for increased power to fit complex time series, we
 give up several things. The first is interpretability. A given
@@ -274,8 +270,7 @@ the baseline, with a MAPE of 7.33% and a MASE of 0.94.
 
 \[\[ FIGURE: improved model vs actuals \]\]
 
-![](Pictures/10000201000002BC000001C2BE635F4A74415874.png){width="6.5in"
-height="4.1807in"}
+![](figures/prophet-complex.png)
 
 #### The final model
 
@@ -311,8 +306,7 @@ a MAPE of 6.95% and a MASE of 0.89.
 
 \[\[ FIGURE: final model vs actuals \]\]
 
-![](Pictures/10000201000002BC000001C239C4125469392358.png){width="6.5in"
-height="4.1807in"}
+![](figures/prophet-complex-log)
 
 Clearly the model is not perfect. However, with the diagnostic app, we
 can investigate the areas of good and poor fit.
@@ -428,8 +422,7 @@ using forecasting to aid, for example, capacity planning.
 
 \[\[ FIGURE: app interface. \]\]
 
-![](Pictures/100002010000028C000004FEB21525B1D34D744C.png){width="4.1902in"
-height="8.2244in"}
+![](figures/app.png)
 
 #### Backcasting
 

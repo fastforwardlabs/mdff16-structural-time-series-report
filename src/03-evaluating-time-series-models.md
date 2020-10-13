@@ -124,8 +124,7 @@ mean of the absolute value of the error as a fraction of the true value.
 
 \[\[ FIGURE: definition of MAPE. \]\]
 
-![](Pictures/10000201000001AF000000651EFA049EA2E09763.png){width="4.4898in"
-height="1.052in"}
+![](figures/mape-defn.png)
 
 MAPE, while interpretable, has some problems. It does not treat
 overprediction and underprediction symmetrically. The same error (as in,
@@ -163,8 +162,7 @@ For more in-depth discussion of the considerations in choosing a
 forecast-accuracy metric, we recommend the linked papers.
 
 \[\[ FIGURE: definition of MASE
-\]\]![](Pictures/10000201000001B00000006CC683ED52A2D9B857.png){width="4.5in"
-height="1.1252in"}
+\]\]![](figures/mase-defn.png)
 
 The baseline used when computing MASE is the naive one-step ahead
 forecast, but it can easily be extended to a seasonal variant.
