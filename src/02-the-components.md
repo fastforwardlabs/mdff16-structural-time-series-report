@@ -43,7 +43,8 @@ is often used. With such a prior, if we consider the vector of potential
 changepoints, it will likely turn out sparse (having many zeros).] over
 their magnitude, so that only a subset is ultimately selected.
 
-\[\[ FIGURE: a piecewise linear approximation of a time series \]\]
+
+![TODO: a piecewise linear approximation of a time series ](/figures/ff16-04.png)
 
 Many processes have an intrinsic limit in capacity, above (or below)
 which it is impossible for them to grow (or fall). These saturating
@@ -59,8 +60,8 @@ learn arbitrary functions.
 
 ### Seasonality
 
-\[\[ Figure: a general seasonal pattern graph (following seasons) next
-to a weekly pattern graph \]\]
+![TODO: a general seasonal pattern graph (following seasons) next
+to a weekly pattern graph](/figures/ff16-05.png)
 
 Structural approaches to time series are especially useful when the time
 series displays some seasonal periodicity. These may correspond to the
@@ -91,11 +92,11 @@ having its own periodicity. For instance, there may be a repeating
 annual cycle, weekly cycle, and daily cycle, all active in the same time
 series.
 
-\[\[ FIGURE: a Fourier approximation of some periodic function \]\]
+![TODO: a Fourier approximation of some periodic function](/figures/ff16-06.png)
 
 ### Impact effects
 
-\[\[ figure: simple impact graph example \]\]
+![TODO: simple impact graph example](/figures/ff16-07.png)
 
 Some time series have discrete impact effects, active only at specific
 times. For instance, sales for some consumer products are likely to peak

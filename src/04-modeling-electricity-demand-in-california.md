@@ -8,8 +8,8 @@ One can imagine myriad uses for accurate and timely projections of future energy
 usage: from upscaling and downscaling production to discovering outlandishly
 high or low usage in recent data.
 
-\[\[ Figure: illustration of electricity use, maybe the inside of a
-power plant with the time series graph on a control panel screen \]\]
+![TODO: illustration of electricity use, maybe the inside of a
+power plant with the time series graph on a control panel screen](/figures/ff16-09.png)
 
 To create our forecast, we'll employ Facebook's open source forecasting
 tool: [Prophet](https://facebook.github.io/prophet/).^[We first wrote about
@@ -420,9 +420,7 @@ selected range exceeding a chosen threshold?" We envision that extended
 versions of this interface could provide a useful interface for analysts
 using forecasting to aid, for example, capacity planning.
 
-\[\[ FIGURE: app interface. \]\]
-
-![](figures/app.png)
+![TODO: app interface](figures/ff16-10.png)
 
 #### Backcasting
 

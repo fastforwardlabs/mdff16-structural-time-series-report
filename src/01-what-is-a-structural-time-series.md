@@ -6,7 +6,7 @@ or sudden spikes or drops. Structural approaches to time series address
 these features explicitly by representing an observed time series as a
 combination of components.
 
-\[\[ figure: decomposed time series \]\]
+![TODO: Decomposed time series](/figures/ff16-02.png)
 
 There are two broad approaches to structural time series. In the first,
 a structural time series is treated as a state space model. In this
@@ -22,7 +22,7 @@ Structural Time Series, in R) and the TensorFlow Probability
 module support the state space model formulation of structural time
 series.
 
-\[\[ figure: labeled time series \]\]
+![TODO: Labeled time series](/figures/ff16-03.png)
 
 In the second approach, structural time series are generalized additive
 models (GAMs), where the time series is decomposed into functions that

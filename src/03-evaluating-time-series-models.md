@@ -7,8 +7,7 @@ that are unique to time series data.
 
 ### Horizons
 
-\[\[ figure: graph showing consequences of different evaluation points
-\]\]
+![TODO: graph showing consequences of different evaluation points](/figures/ff16-08.png)
 
 Time series forecasts are often evaluated at multiple time horizons. The
 appropriate time horizon at which to evaluate a forecast depends
@@ -124,7 +123,7 @@ mean of the absolute value of the error as a fraction of the true value.
 
 \[\[ FIGURE: definition of MAPE. \]\]
 
-![](figures/mape-defn.png)
+![](/figures/MAPE-defn.png)
 
 MAPE, while interpretable, has some problems. It does not treat
 overprediction and underprediction symmetrically. The same error (as in,
@@ -162,7 +161,7 @@ For more in-depth discussion of the considerations in choosing a
 forecast-accuracy metric, we recommend the linked papers.
 
 \[\[ FIGURE: definition of MASE
-\]\]![](figures/mase-defn.png)
+\]\]![](figures/MASE-defn.png)
 
 The baseline used when computing MASE is the naive one-step ahead
 forecast, but it can easily be extended to a seasonal variant.
