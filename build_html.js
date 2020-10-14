@@ -307,20 +307,16 @@ function makeStyle() {
  .table-of-contents ul {
     list-style: none;
     padding-left: 0;
-    margin-bottom: none;
+    margin-bottom: 0;
   }
  .table-of-contents > ul {
-    padding-bottom: ${rlh}px;
-  }
-  .table-of-contents > ul > li > a:before {
-          counter-increment: chapters;
-          content: counter(chapters) ". ";
   }
  .table-of-contents > ul > li {
     font-weight: bold;
   }
  .table-of-contents > ul > li {
     font-weight: bold;
+   margin-bottom: ${rlh / 2}px;
   }
 
  .table-of-contents > ul > li > ul > li {
@@ -344,9 +340,9 @@ function makeStyle() {
   }
   .table-of-contents ul a {
     display: block;
-    padding-left: 3ch;
-    text-indent: -1ch;
-    padding-right: 2ch;
+    padding-left: 24px;
+    text-indent: -8px;
+    padding-right: 16px;
   }
   .table-of-contents ul li a.active {
     position: relative;
@@ -370,19 +366,8 @@ h2 {
   position: relative;
   display: block;
   page-break-before: always;
-  padding-top: ${rlh + rlh / 2}px;
+  padding-top: ${rlh}px;
 }
-  h2:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-      font-size: ${line * bf}px;
-    color: black;
-    counter-increment: chp;
-    content: "chapter " counter(chp);
-    text-transform: uppercase;
-  }
-
   .toc-desktop-hidden .table-of-contents {
     width: auto;
   }
@@ -422,8 +407,6 @@ h2 {
       margin-bottom: ${lq * 2}px;
     }
     .table-of-contents ul li {
-      padding-top: ${lq / 2}px;
-      padding-bottom: ${lq / 2}px;
     }
 
     #toc-header {

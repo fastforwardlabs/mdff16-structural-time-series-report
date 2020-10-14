@@ -7,7 +7,7 @@ that are unique to time series data.
 
 ### Horizons
 
-![Figure: A model that is good at short term predictions may not be good at long term predictions, and vice versa. We should use a model appropriate to our purpose.](/figures/ff16-08.png)
+![A model that is good at short term predictions may not be good at long term predictions, and vice versa. We should use a model appropriate to our purpose.](/figures/ff16-08.png)
 
 Time series forecasts are often evaluated at multiple time horizons. The
 appropriate time horizon at which to evaluate a forecast depends
@@ -121,7 +121,7 @@ easy interpretation, with a MAPE of 0.05 corresponding to being about 5%
 wrong, on average. The MAPE is defined exactly as we'd expect: it's the
 mean of the absolute value of the error as a fraction of the true value.
 
-![Figure: The definition of MAPE. The mean is taken over all timesteps *t*.](/figures/MAPE-defn.png)
+![The definition of MAPE. The mean is taken over all timesteps *t*.](/figures/MAPE-defn.png)
 
 MAPE, while interpretable, has some problems. It does not treat
 overprediction and underprediction symmetrically. The same error (as in,
@@ -158,7 +158,7 @@ appropriate for intermittent demand (see [Another look at forecast-accuracy metr
 For more in-depth discussion of the considerations in choosing a
 forecast-accuracy metric, we recommend the linked papers.
 
-![Figure: The definitio of MASE. The mean is taken over all timesteps *t*. The MAE is the Mean Absolute Error of the naive baseline model on the training set.](figures/MASE-defn.png)
+![The definitio of MASE. The mean is taken over all timesteps *t*. The MAE is the Mean Absolute Error of the naive baseline model on the training set.](figures/MASE-defn.png)
 
 The baseline used when computing MASE is the naive one-step ahead
 forecast, but it can easily be extended to a seasonal variant.
