@@ -7,7 +7,7 @@ FF16 &middot; _October 2020_
 _This is an applied research report by <a href="https://www.cloudera.com/products/fast-forward-labs-research.html">Cloudera Fast Forward</a>.
 We write reports about emerging technologies.
 Accompanying each report are working prototypes or code that exhibits the capabilities of the algorithm and offer detailed technical advice on its practical application.
-Read our full report on structural time series below or <a href="/FF16-Structural_Time_Series-Cloudera_Fast_Forward.pdf" target="_blank" id="report-pdf-download">download the PDF</a>._
+Read our full report on structural time series below or <a href="/FF16-Structural_Time_Series-Cloudera_Fast_Forward.pdf" target="_blank" id="report-pdf-download">download the PDF</a>._ You can view and download the code for the accompanying electricity demand forecast experiments <a href="https://github.com/fastforwardlabs/structural-time-series" target="_blank">on Github</a>.
 
 [[TOC]]
 
