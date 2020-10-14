@@ -606,7 +606,7 @@ ${makeJS()}
     document.getElementById('report-pdf-download').addEventListener('click', function() {
       ga('send', {
         hitType: 'pageview',
-        page: '//FF09-Federated_Learning-Cloudera_Fast_Forward.pdf'
+        page: '//FF16-Structural_Time_Series-Cloudera_Fast_Forward.pdf'
       });
     });
   })

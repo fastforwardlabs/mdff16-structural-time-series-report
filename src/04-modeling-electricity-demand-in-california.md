@@ -8,7 +8,7 @@ One can imagine myriad uses for accurate and timely projections of future energy
 usage: from upscaling and downscaling production to discovering outlandishly
 high or low usage in recent data.
 
-![There are many possible applications for good forecasts of electricity demand.](/figures/ff16-09.png)
+![There are many possible applications for good forecasts of electricity demand.](figures/ff16-09.png)
 
 To create our forecast, we'll employ Facebook's open source forecasting
 tool: [Prophet](https://facebook.github.io/prophet/).^[We first wrote about

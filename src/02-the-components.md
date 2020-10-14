@@ -44,7 +44,7 @@ changepoints, it will likely turn out sparse (having many zeros).] over
 their magnitude, so that only a subset is ultimately selected.
 
 
-![A smooth time series may be modeled with a piecewise linear approximation. This is particularly useful for capturing changing trends.](/figures/ff16-04.png)
+![A smooth time series may be modeled with a piecewise linear approximation. This is particularly useful for capturing changing trends.](figures/ff16-04.png)
 
 Many processes have an intrinsic limit in capacity, above (or below)
 which it is impossible for them to grow (or fall). These saturating
@@ -60,7 +60,7 @@ learn arbitrary functions.
 
 ### Seasonality
 
-![Seasonal patterns may follow the natural seasons, but more generally refer to any repeating pattern. For instance, in time series of commercial activity, there is often a weekly pattern, where the weekends behave differently than the weekdays.](/figures/ff16-05.png)
+![Seasonal patterns may follow the natural seasons, but more generally refer to any repeating pattern. For instance, in time series of commercial activity, there is often a weekly pattern, where the weekends behave differently than the weekdays.](figures/ff16-05.png)
 
 Structural approaches to time series are especially useful when the time
 series displays some seasonal periodicity. These may correspond to the
@@ -91,11 +91,11 @@ having its own periodicity. For instance, there may be a repeating
 annual cycle, weekly cycle, and daily cycle, all active in the same time
 series.
 
-![The black square wave can be approximated with a Fourier expansion. The smooth green line is a low-degree approximation. The orange line, which follows the black square much more closely, is a high-degree approximation.](/figures/ff16-06.png)
+![The black square wave can be approximated with a Fourier expansion. The smooth green line is a low-degree approximation. The orange line, which follows the black square much more closely, is a high-degree approximation.](figures/ff16-06.png)
 
 ### Impact effects
 
-![A time series may have seemingly anomalous points that occur at particular times, such as on holidays, or which coincide with sporting events.](/figures/ff16-07.png)
+![A time series may have seemingly anomalous points that occur at particular times, such as on holidays, or which coincide with sporting events.](figures/ff16-07.png)
 
 Some time series have discrete impact effects, active only at specific
 times. For instance, sales for some consumer products are likely to peak
